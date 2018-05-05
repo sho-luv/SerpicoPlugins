@@ -1,0 +1,8 @@
+{
+  "name": "NIST800_Chart",
+  "description": "Adds NIST800-30 chart to findings edit and add views",
+  "link": "/NIST800_Chart/nist800-30_chart_add.rb",
+  "enabled": false,
+  "report_view": false,
+  "admin_view": false
+}
