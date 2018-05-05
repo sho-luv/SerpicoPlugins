@@ -36,7 +36,7 @@ if File.file?("#{Dir.pwd()}/plugins/NIST800_Chart/installed")
 
       # To write changes to the file, use:
       #File.open(file_name, "w") {|file| file.puts new_contents }
-      File.write(file_name, text.gsub(/regexp/, "replace")
+      File.write(file_name, text.gsub(/text_to_replace/, new_text)
     end
 
 
