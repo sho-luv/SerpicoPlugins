@@ -25,21 +25,11 @@ if File.file?("#{Dir.pwd()}/plugins/NIST800_Chart/installed")
             %p
               %img{:src => "/img/nist800.png"}'
 
-    file_names = ['views/create_finding.haml', 'views/findings_edit.haml']
-
+    file_names = ["#{Dir.pwd()}/views/create_finding.haml", "#{Dir.pwd()}/views/findings_edit.haml"]
     file_names.each do |file_name|
       text = File.read(file_name)
-      new_contents = text.gsub(/text_to_replace/, new_text)
-
-      # To merely print the contents of the file, use:
-      puts new_contents
-
-      # To write changes to the file, use:
-      #File.open(file_name, "w") {|file| file.puts new_contents }
-      File.write(file_name, text.gsub(/text_to_replace/, new_text)
+      File.write(file_name, text.gsub(/text_to_replace/, new_text))
     end
-
-
 else
 	puts "|!| Failed to load NIST800_Chart, see the README for installation instructions."
 end
