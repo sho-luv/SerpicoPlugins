@@ -1,4 +1,10 @@
 if File.file?("#{Dir.pwd()}/plugins/NIST800_Chart/installed")
+    if File.file?("#{Dir.pwd()}/plugins/NIST800_Chart/nist800.png")
+      File.rename("#{Dir.pwd()}/plugins/NIST800_Chart/nist800.png", "#{Dir.pwd()}/public/img/nist800.png")
+    else
+      puts "|!| Failed to locate NIST800 image to use."
+      exit
+    end
 
     text_to_replace = '    - elsif @nist800
       .control-group.nist800'
@@ -32,10 +38,7 @@ if File.file?("#{Dir.pwd()}/plugins/NIST800_Chart/installed")
       #File.open(file_name, "w") {|file| file.puts new_contents }
       File.write(file_name, text.gsub(/regexp/, "replace")
     end
-    if File.file?("#{Dir.pwd()}/plugins/NIST800_Chart/nist800.png")
-      File.rename("#{Dir.pwd()}/plugins/NIST800_Chart/nist800.png", "#{Dir.pwd()}/public/img/nist800.png")
-    else
-      puts "|!| Failed to locate NIST800 image to use."
+
 
 else
 	puts "|!| Failed to load NIST800_Chart, see the README for installation instructions."
