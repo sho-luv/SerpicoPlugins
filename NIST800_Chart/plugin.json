@@ -2,7 +2,7 @@
   "name": "NIST800_Chart",
   "description": "Adds NIST800-30 chart to findings edit and add views",
   "link": "/NIST800_Chart/auto_enable.rb",
-  "enabled": true,
+  "enabled": false,
   "report_view": false,
   "admin_view": false
 }
