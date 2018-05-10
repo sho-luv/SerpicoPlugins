@@ -1,0 +1,8 @@
+{
+  "name": "NIST800_Chart",
+  "description": "Adds NIST800-30 chart to findings edit and add views",
+  "link": "/NIST800_Chart/import",
+  "enabled": true,
+  "report_view": false,
+  "admin_view": false
+}
