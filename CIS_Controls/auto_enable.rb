@@ -72,7 +72,7 @@ def enable
 
     file2 = ["#{Dir.pwd()}/server.rb"]
     # Code that is searched for as marker
-    code2 = '#Nist800.*## LDAP Settings'
+    code2 = '# NIST800.*## LDAP Settings'
     # Code that is inserted to add plugin
     new_code2 = <<-'CODE'
 #Nist800
