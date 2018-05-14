@@ -75,7 +75,7 @@ def enable
     code2 = '# NIST800.*## LDAP Settings'
     # Code that is inserted to add plugin
     new_code2 = <<-'CODE'
-#Nist800
+# NIST800
   set :nist_likelihood, ["Low","Moderate","High"]
   set :nist_impact, ["Informational","Low","Moderate","High","Critical"]
   # used impact from Risk Matrix
